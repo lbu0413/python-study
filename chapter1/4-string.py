@@ -103,4 +103,4 @@ print(str_s1[::-1])  # reverse
 a = "z"
 
 print(ord(a))  # ascii code
-print(chr(122))
+print(chr(122))  # ascii code를 집어넣으면 캐릭터를 리턴
