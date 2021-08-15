@@ -47,7 +47,7 @@ print("{:10.5}".format("pythonstudy"))
 # %d
 print("%d %d" % (1, 2))
 print("{} {}".format(1, 2))
-
+     
 print("%4d" % (422))
 print("{:4d}".format(422))
 
