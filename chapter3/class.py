@@ -39,3 +39,6 @@ if a.species == "firstdog":
 print(Dog.species)
 print(a.species)
 print(b.species)
+
+
+# self의 이해
