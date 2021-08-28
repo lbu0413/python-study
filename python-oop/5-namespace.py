@@ -1,11 +1,19 @@
 """
-abstraction
-불필요한 정보는 숨기고 중요한 혹은 필요한 정보만을 표현함으로써
-공통의 속성 값이나 행위(methods)를 하나로 묶어 이름을 붙이는 것이다.
+namespace: 개체를 구분할 수 있는 범위
+__dict__: 네임스페이스를 확인할 수 있다
+dir(): 네임스페이스의 key 값을 확인할 수 있다
+__doc__: class의 주석을 확인한다
+__class__: 어떤 클래스로 만들어진 인스턴스인지 확인할 수 있다
 """
 
 
 class Robot:
+    """
+    [Robot Class]
+    Author: 이병욱
+    Role: ???
+    """
+
     # 클래스 변수 : 인스턴스들이 공유하는 변수
     population = 0
 
@@ -41,3 +49,24 @@ siri = Robot("siri", 2103898223)
 jarvis = Robot("jarvis", 124948933)
 bixby = Robot("bixby", 891923222)
 Robot.how_many()
+
+# 메모리 효율을 위해 클래스 namespace 안에 인스턴스의 정보가 다 들어가있다.
+print(Robot.__dict__)
+print(siri.__dict__)
+print(jarvis.__dict__)
+
+# say_hi는 인스턴스 메소드
+print(Robot.say_hi(siri) == siri.say_hi())
+
+# dir은 접근 가능한 모든 메소드들(key값)을 보여준다
+print(dir(siri))
+print(dir(Robot))
+
+
+# doc 메소드는 클래스 안에 주석을 확인할 수 있는 메소드
+# 클래스 설계는 보통 추상적이기 때문에 주석만 확인해서 클래스의 용도를 파악하는 경우를 위해.
+print(Robot.__doc__)
+
+
+# __class__ 어떤 인스턴스가 속해있는 클래스를 확인하고 싶을때 사용.
+print(siri.__class__)
