@@ -24,17 +24,17 @@
 # 1 2 3 4 5 6 7 8 9 10
 # 10 5
 # 6262 6004 1801 7660 7919 1280 525 9798 5134 1821
-# 20 19
+#
 # 3266 9419 3087 9001 9321 1341 7379 6236 5795 8910 2990 2152 2249 4059 1394 6871 4911 3648 1969 2176
 
 
-# T = int(input())
+T = int(input())
 
-# for i in range(1, T + 1):
-#     N, M = map(int, input().split())
-#     numbers = list(map(int, input().split()))
-#     new_list = []
-#     for j in range(N - M + 1):
-#         new_list.append(sum(numbers[j : M + j]))
-#     print(new_list)
-#     print(f"#{i} {max(new_list) - min(new_list)}")
+for i in range(1, T + 1):
+    N, M = map(int, input().split())
+    numbers = list(map(int, input().split()))
+    new_list = []
+    for j in range(N - M + 1):
+        new_list.append(sum(numbers[j : M + j]))
+    print(new_list)
+    print(f"#{i} {max(new_list) - min(new_list)}")
